@@ -1,6 +1,7 @@
 import { useEffect, useMemo } from 'react'
 import { useGLTF } from '@react-three/drei'
 import * as THREE from 'three'
+import { asset } from '../utils/base'
 
 interface Props {
   file: string
@@ -22,7 +23,6 @@ export default function ShoeModel({ file, color, position = [0, 0, 0] }: Props) 
     if (!mesh) return
     const applyColor = (obj: THREE.Object3D) => {
       if (obj instanceof THREE.Mesh) {
-        // Clone material too, so color changes are isolated to this instance
         if (!('_cloned' in obj.userData)) {
           obj.material = (obj.material as THREE.MeshStandardMaterial).clone()
           obj.userData._cloned = true
@@ -40,6 +40,6 @@ export default function ShoeModel({ file, color, position = [0, 0, 0] }: Props) 
   return <primitive object={mesh} scale={0.9} position={position} />
 }
 
-import { asset } from '../utils/base'
+useGLTF.setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.5.6/')
 useGLTF.preload(asset('shoe.glb'))
 useGLTF.preload(asset('airlift.glb'))
