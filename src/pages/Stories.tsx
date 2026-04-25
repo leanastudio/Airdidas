@@ -25,7 +25,7 @@ function Lights() {
 
 export default function Stories() {
   const heroRef    = useRef<HTMLDivElement>(null)
-  const sectionsRef = useRef<HTMLDivElement[]>([])
+  const sectionsRef = useRef<HTMLElement[]>([])
 
   useEffect(() => {
     // Hero parallax
@@ -51,7 +51,7 @@ export default function Stories() {
     return () => ScrollTrigger.getAll().forEach((t) => t.kill())
   }, [])
 
-  const addSection = (el: HTMLDivElement | null, i: number) => {
+  const addSection = (el: HTMLElement | null, i: number) => {
     if (el) sectionsRef.current[i] = el
   }
 
