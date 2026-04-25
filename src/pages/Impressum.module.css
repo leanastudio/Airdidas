@@ -1,0 +1,90 @@
+.page {
+  min-height: 100vh;
+  background: #f5f0ff;
+  padding-top: 100px;
+}
+
+.inner {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 80px 8vw 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.back {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #1a1a2e;
+  opacity: 0.45;
+  text-decoration: none;
+  transition: opacity 0.15s;
+  align-self: flex-start;
+}
+
+.back:hover { opacity: 0.9; }
+
+.heading {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: #1a1a2e;
+  margin-top: -8px;
+}
+
+.note {
+  font-size: 0.82rem;
+  background: rgba(200,168,255,0.25);
+  border-left: 3px solid #c8a8ff;
+  padding: 12px 16px;
+  border-radius: 0 8px 8px 0;
+  color: #1a1a2e;
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(26,26,46,0.07);
+}
+
+.section:last-of-type {
+  border-bottom: none;
+}
+
+.section h2 {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #1a1a2e;
+  opacity: 0.4;
+}
+
+.section p {
+  font-size: 0.93rem;
+  color: #1a1a2e;
+  line-height: 1.75;
+  opacity: 0.75;
+}
+
+.fakeLink {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  opacity: 0.6;
+}
+
+.portfolio {
+  font-size: 0.78rem;
+  color: #1a1a2e;
+  opacity: 0.45;
+  border: 1.5px dashed rgba(26,26,46,0.2);
+  border-radius: 10px;
+  padding: 14px 18px;
+  line-height: 1.6;
+}

@@ -1,0 +1,228 @@
+.page {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding-top: 100px;
+  padding-bottom: 0;
+  position: relative;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.15) 0%,
+    rgba(201,232,245,0.55) 100%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 8vw 100px;
+}
+
+.heading {
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: #1a1a2e;
+  margin-bottom: 64px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 64px;
+  align-items: start;
+}
+
+@media (max-width: 800px) {
+  .grid { grid-template-columns: 1fr; gap: 48px; }
+}
+
+/* ── Info column ── */
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.intro {
+  font-size: 1.05rem;
+  color: #1a1a2e;
+  opacity: 0.7;
+  line-height: 1.7;
+  max-width: 340px;
+}
+
+.details {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.details li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.9rem;
+  color: #1a1a2e;
+  line-height: 1.6;
+}
+
+.detailLabel {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #1a1a2e;
+  opacity: 0.4;
+  text-transform: uppercase;
+}
+
+.socials {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.social {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #1a1a2e;
+  opacity: 0.5;
+  border: 1.5px solid rgba(26,26,46,0.2);
+  padding: 6px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.social:hover { opacity: 1; }
+
+/* ── Form column ── */
+.formWrap {
+  background: rgba(255,255,255,0.55);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.7);
+  border-radius: 24px;
+  padding: 44px 40px;
+  box-shadow: 0 8px 40px rgba(26,26,46,0.07);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 500px) {
+  .row { grid-template-columns: 1fr; }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #1a1a2e;
+  opacity: 0.6;
+  text-transform: uppercase;
+}
+
+.field input,
+.field textarea {
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #1a1a2e;
+  background: rgba(255,255,255,0.6);
+  border: 1.5px solid rgba(26,26,46,0.12);
+  border-radius: 10px;
+  padding: 12px 14px;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+  resize: none;
+  opacity: 1;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: #1a1a2e;
+  opacity: 0.3;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: #c8a8ff;
+  background: rgba(255,255,255,0.85);
+}
+
+.submit {
+  align-self: flex-start;
+  background: #1a1a2e;
+  color: white;
+  border: none;
+  padding: 14px 36px;
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-top: 4px;
+}
+
+.submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(26,26,46,0.25);
+}
+
+/* ── Success state ── */
+.success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 60px 20px;
+  text-align: center;
+  color: #1a1a2e;
+}
+
+.successIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #c8a8ff;
+  color: white;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.success p {
+  font-size: 0.95rem;
+  opacity: 0.7;
+  line-height: 1.6;
+  max-width: 260px;
+}
