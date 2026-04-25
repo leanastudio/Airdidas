@@ -65,7 +65,7 @@ export default function Hero() {
       <div className={styles.content}>
         <span ref={tagRef} className={styles.tag}>NEW COLLECTION 2025</span>
         <h1 ref={headlineRef} className={styles.headline}>
-          Run Above<br />Reality
+          Run<br />Above<br />Reality
         </h1>
         <p ref={subRef} className={styles.sub}>
           Engineered for those who refuse to stay grounded.
