@@ -6,6 +6,7 @@ import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import ShoeModel from './ShoeModel'
 import styles from './Showcase.module.css'
+import { asset } from '../utils/base'
 
 
 
@@ -21,7 +22,7 @@ const models = [
     flip: false,
     desc: 'Ultra-light mesh with reactive air cushioning. Zero gravity feel.',
     spec: ['87g', 'Upper weight'],
-    glb: '/airlift.glb',
+    glb: asset('airlift.glb'),
     tint: '#ffffff',
     ambientColor: '#c8e8ff',
     glowColor: '#90ccff',
@@ -36,7 +37,7 @@ const models = [
     flip: true,            // shoe left, text right
     desc: 'Engineered for distance. Cloud foam disperses impact across every stride.',
     spec: ['42km', 'Tested range'],
-    glb: '/shoe.glb',
+    glb: asset('shoe.glb'),
     tint: '#c8a8ff',
     ambientColor: '#e0d0ff',
     glowColor: '#c8a8ff',
@@ -51,7 +52,7 @@ const models = [
     flip: false,
     desc: 'Dark matter aesthetic. Reflective panels for visibility in any condition.',
     spec: ['Limited', '200 pairs'],
-    glb: '/airlift.glb',
+    glb: asset('airlift.glb'),
     tint: '#ffffff',
     ambientColor: '#080612',
     glowColor: '#4444dd',

@@ -40,5 +40,6 @@ export default function ShoeModel({ file, color, position = [0, 0, 0] }: Props) 
   return <primitive object={mesh} scale={0.9} position={position} />
 }
 
-useGLTF.preload('/shoe.glb')
-useGLTF.preload('/airlift.glb')
+import { asset } from '../utils/base'
+useGLTF.preload(asset('shoe.glb'))
+useGLTF.preload(asset('airlift.glb'))

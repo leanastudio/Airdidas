@@ -5,6 +5,7 @@ import { gsap } from 'gsap'
 import ShoeModel from './ShoeModel'
 import styles from './Hero.module.css'
 import skyBg from '../assets/sky.png'
+import { asset } from '../utils/base'
 
 const COLORS = [
   { label: 'White',    hex: '#ffffff' },
@@ -55,7 +56,7 @@ export default function Hero() {
           >
             <Lights />
             <Suspense fallback={null}>
-              <ShoeModel file="/airlift.glb" color={activeColor} position={[0, 0, 0]} />
+              <ShoeModel file={asset('airlift.glb')} color={activeColor} position={[0, 0, 0]} />
             </Suspense>
             <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={0.8} />
           </Canvas>

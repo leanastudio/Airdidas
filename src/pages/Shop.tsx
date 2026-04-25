@@ -7,6 +7,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import ShoeModel from '../components/ShoeModel'
 import { useCart } from '../context/CartContext'
+import { asset } from '../utils/base'
 import styles from './Shop.module.css'
 
 /* ── Data ── */
@@ -14,7 +15,7 @@ const MODELS = [
   {
     id: 'airlift',
     name: 'Air Lift 01',
-    glb: '/airlift.glb',
+    glb: asset('airlift.glb'),
     price: 249,
     tag: 'Flagship',
     desc: 'Engineered for those who refuse to stay grounded. The Air Lift 01 features a single-layer engineered mesh upper, reactive air cushioning, and translucent sole pods for a zero-gravity feel on every stride.',
@@ -28,7 +29,7 @@ const MODELS = [
   {
     id: 'cloudrun',
     name: 'Cloud Run X',
-    glb: '/shoe.glb',
+    glb: asset('shoe.glb'),
     price: 189,
     tag: 'Performance',
     desc: 'Built for the long run. Cloud foam pods disperse impact across the full length of each stride, while the adaptive mesh hugs your foot without restriction.',
@@ -42,7 +43,7 @@ const MODELS = [
   {
     id: 'void',
     name: 'Void Runner',
-    glb: '/airlift.glb',
+    glb: asset('airlift.glb'),
     price: 329,
     tag: 'Limited Edition',
     desc: 'Only 200 pairs. The Void Runner takes the Air Lift silhouette into darkness — reflective panels catch light in any condition, while the deep-space colorway makes a statement before you even move.',

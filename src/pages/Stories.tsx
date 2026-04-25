@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import ShoeModel from '../components/ShoeModel'
+import { asset } from '../utils/base'
 import styles from './Stories.module.css'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -61,7 +62,7 @@ export default function Stories() {
 
       {/* ── HERO ── */}
       <div className={styles.hero}>
-        <div ref={heroRef} className={styles.heroBg} style={{ backgroundImage: 'url(/stories/sketch-desk.png)' }} />
+        <div ref={heroRef} className={styles.heroBg} style={{ backgroundImage: `url(${asset('stories/sketch-desk.png')})` }} />
         <div className={styles.heroOverlay} />
         <div className={styles.heroContent}>
           <span className={styles.tag}>BEHIND THE DESIGN</span>
@@ -98,7 +99,7 @@ export default function Stories() {
           </div>
           <div className={styles.splitRight}>
             <div className={styles.imageWrap}>
-              <img src="/stories/sketch-clean.png" alt="First sketch of the Air Lift 01" className={styles.image} />
+              <img src={asset('stories/sketch-clean.png')} alt="First sketch of the Air Lift 01" className={styles.image} />
               <div className={styles.imageCaption}>Iteration 1 — Profile Concept</div>
             </div>
           </div>
@@ -115,7 +116,7 @@ export default function Stories() {
         <section ref={(el) => addSection(el, 2)} className={styles.section}>
           <div className={styles.splitRight}>
             <div className={styles.imageWrap}>
-              <img src="/stories/material.png" alt="Air Lift 01 mesh material close-up" className={styles.image} />
+              <img src={asset('stories/material.png')} alt="Air Lift 01 mesh material close-up" className={styles.image} />
               <div className={styles.imageCaption}>Engineered mesh upper — pre-production sample</div>
             </div>
           </div>
@@ -160,7 +161,7 @@ export default function Stories() {
           </div>
           <div className={styles.splitRight}>
             <div className={`${styles.imageWrap} ${styles.imageWrapDark}`}>
-              <img src="/stories/meshy.png" alt="Meshy AI raw 3D model" className={styles.image} />
+              <img src={asset('stories/meshy.png')} alt="Meshy AI raw 3D model" className={styles.image} />
               <div className={`${styles.imageCaption} ${styles.imageCaptionLight}`}>Raw mesh — Meshy AI, pre-texture</div>
             </div>
           </div>
@@ -180,7 +181,7 @@ export default function Stories() {
             <Canvas camera={{ position: [0, 0.1, 4.0], fov: 40 }} gl={{ antialias: true, alpha: true }}>
               <Lights />
               <Suspense fallback={null}>
-                <ShoeModel file="/airlift.glb" color="#ffffff" position={[0, 0, 0]} />
+                <ShoeModel file={asset('airlift.glb')} color="#ffffff" position={[0, 0, 0]} />
               </Suspense>
               <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={1.2} />
             </Canvas>
