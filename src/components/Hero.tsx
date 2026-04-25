@@ -68,9 +68,9 @@ export default function Hero() {
           Run<br />Above<br />Reality
         </h1>
         <p ref={subRef} className={styles.sub}>
-          Engineered for those who refuse to stay grounded.
+          Engineered for those who refuse to<br />grounded.
         </p>
-        <button ref={ctaRef} className={styles.cta} onClick={() => document.getElementById('collection')?.scrollIntoView({ behavior: 'smooth' })}>Explore Collection</button>
+        <button ref={ctaRef} className={styles.cta} style={{ whiteSpace: 'nowrap' }} onClick={() => document.getElementById('collection')?.scrollIntoView({ behavior: 'smooth' })}>Explore Collection</button>
 
         <div className={styles.colorPicker}>
           <span className={styles.colorLabel}>Color</span>
