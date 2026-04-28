@@ -4,7 +4,6 @@ import { OrbitControls } from '@react-three/drei'
 import { gsap } from 'gsap'
 import ShoeModel from './ShoeModel'
 import styles from './Hero.module.css'
-import skyBg from '../assets/sky.png'
 import { asset } from '../utils/base'
 
 const COLORS = [
@@ -46,7 +45,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className={styles.hero} style={{ backgroundImage: `url(${skyBg})` }}>
+    <section className={styles.hero} style={{ backgroundImage: `url(${asset('sky.png')})` }}>
       <div className={styles.overlay} />
 
       <div className={styles.canvas}>

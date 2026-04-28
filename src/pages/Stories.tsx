@@ -99,7 +99,7 @@ export default function Stories() {
           </div>
           <div className={styles.splitRight}>
             <div className={styles.imageWrap}>
-              <img src={asset('stories/sketch-clean.png')} alt="First sketch of the Air Lift 01" className={styles.image} />
+              <img src={asset('stories/sketch-clean.png')} alt="First sketch of the Air Lift 01" className={styles.image} loading="lazy" decoding="async" />
               <div className={styles.imageCaption}>Iteration 1 — Profile Concept</div>
             </div>
           </div>
@@ -116,7 +116,7 @@ export default function Stories() {
         <section ref={(el) => addSection(el, 2)} className={styles.section}>
           <div className={styles.splitRight}>
             <div className={styles.imageWrap}>
-              <img src={asset('stories/material.png')} alt="Air Lift 01 mesh material close-up" className={styles.image} />
+              <img src={asset('stories/material.png')} alt="Air Lift 01 mesh material close-up" className={styles.image} loading="lazy" decoding="async" />
               <div className={styles.imageCaption}>Engineered mesh upper — pre-production sample</div>
             </div>
           </div>
@@ -161,7 +161,7 @@ export default function Stories() {
           </div>
           <div className={styles.splitRight}>
             <div className={`${styles.imageWrap} ${styles.imageWrapDark}`}>
-              <img src={asset('stories/meshy.png')} alt="Meshy AI raw 3D model" className={styles.image} />
+              <img src={asset('stories/meshy.png')} alt="Meshy AI raw 3D model" className={styles.image} loading="lazy" decoding="async" />
               <div className={`${styles.imageCaption} ${styles.imageCaptionLight}`}>Raw mesh — Meshy AI, pre-texture</div>
             </div>
           </div>

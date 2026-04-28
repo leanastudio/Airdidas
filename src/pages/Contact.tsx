@@ -3,7 +3,7 @@ import { gsap } from 'gsap'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import styles from './Contact.module.css'
-import skyBg from '../assets/sky.png'
+import { asset } from '../utils/base'
 
 export default function Contact() {
   const headingRef = useRef<HTMLHeadingElement>(null)
@@ -26,7 +26,7 @@ export default function Contact() {
   return (
     <>
       <Navbar />
-      <main className={styles.page} style={{ backgroundImage: `url(${skyBg})` }}>
+      <main className={styles.page} style={{ backgroundImage: `url(${asset('sky.png')})` }}>
         <div className={styles.overlay} />
         <div className={styles.inner}>
           <h1 ref={headingRef} className={styles.heading}>Get in Touch</h1>
